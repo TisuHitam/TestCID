@@ -1,7 +1,6 @@
 // CPPBot.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
 #include "HTTPRequest.hpp"
-#include <sys/system_properties.h>
 #include <iostream>
 #include <iostream>
 #include <fstream>
@@ -124,17 +123,6 @@ int main()
 {
 		system("clear");
 		cout << "Script By ARR\n" << endl;
-		cout << "Anda Terdeteksi Android Version " + osVersion << endl;
-		if (osVersion == "11") {
-			cout << "File Diganti Ke : `acc.txt`\n" << endl;
-			filename = "0";
-		} else if (osVersion == "12") {
-		cout << "File Diganti Ke : `acc.txt`\n" << endl;
-		filename = "0";
-		} else {
-			cout << "File Diganti Ke : `GrowID : ${GrowID}.txt`\n" << endl;
-			filename = "1";
-		}
 		cout << "Memasuki : http://growtopia2.com/growtopia/server_data.php" << endl;
 		cout << dataserver << "\n" << endl;
 		cout << "Get Server : " << servergt << endl;
@@ -150,11 +138,7 @@ int main()
 		cin >> START_DARI;
 		cout << "End Number : ";
 		cin >> END_NUMBER;
-		if (filename == "1") {
-			filename = "GrowID : " + GrowidDepan + GrowidBelakang + ".txt";
-		} else {
-			filename = "acc.txt";
-		}
+		filename = 1;
 		std::thread thr(input);
 		thr.detach();
 		botSetup();
