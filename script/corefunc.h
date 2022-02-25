@@ -1,5 +1,4 @@
 #pragma once
-#include <sys/system_properties.h>
 #include "proton/variant.hpp"
 #include "enet/include/enet.h"
 #include <string>
@@ -29,9 +28,6 @@ string GrowidBelakang = "";
 string GrowidDepan = "";
 string Password_acc;
 string Email_acc;
-char osVersionOld[PROP_VALUE_MAX+1];
-int osVersionLength = __system_property_get("ro.build.version.release", osVersionOld);
-string osVersion = osVersionOld;
 string filename;
 //jangan di ganti ngab
 int START_DARI;
